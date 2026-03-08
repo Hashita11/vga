@@ -1,0 +1,39 @@
+:root {
+    --vga-blue: #002d62; /* Logo Blue */
+    --vga-gold: #d4af37; /* Logo Gold */
+}
+
+body { font-family: 'Segoe UI', sans-serif; margin: 0; line-height: 1.6; }
+
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 5%; background: var(--vga-blue); color: white;
+}
+.logo-text h1 { font-size: 1.5rem; margin: 0; color: var(--vga-gold); }
+.logo-text p { font-size: 0.6rem; letter-spacing: 2px; }
+
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.jpg');
+    background-size: cover; display: flex; align-items: center; justify-content: center;
+    color: white; text-align: center;
+}
+
+.section { padding: 50px 10%; text-align: center; }
+.bg-light { background: #f9f9f9; }
+
+.campus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.card { 
+    background: white; padding: 30px; border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--vga-gold);
+}
+
+.form-box { max-width: 500px; margin: auto; padding: 30px; background: white; border-radius: 10px; }
+input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; }
+.btn-wa { background: #25d366; color: white; border: none; padding: 15px; width: 100%; cursor: pointer; font-weight: bold; }
+
+.whatsapp-float {
+    position: fixed; bottom: 20px; right: 20px; background: #25d366;
+    color: white; width: 60px; height: 60px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 30px;
+}
