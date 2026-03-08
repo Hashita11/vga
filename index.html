@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h2>Veeramallu Global Academy | 3 Campuses</h2>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <a href="https://wa.me/919030369283" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="logo.jpeg" width=96 alt="VGA Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>VEERAMALLU GLOBAL ACADEMY</h1>
+                    <p>DISCIPLINE • KNOWLEDGE • EXCELLENCE</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#campuses">Campuses</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Building Tomorrow's Leaders</h2>
+            <p>Quality English Medium Education across our 3 Premier Campuses.</p>
+            <a href="#admissions" class="btn-gold">Apply Now</a>
+        </div>
+    </section>
+
+    <section id="campuses" class="section">
+        <h2 class="section-title">Our 3 Campuses</h2>
+        <div class="campus-grid">
+            <div class="card">
+                <i class="fas fa-school"></i>
+                <h3>Pavithra Vidyalaya EM School</h3>
+                <p>Khamdhenunagar, Velpur</p>
+                <p><strong>Contact:</strong> 9030369283</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Sri Vivekananda Global EM High School</h3>
+                <p>Velagadurru Road, Undrajavaram</p>
+                <p><strong>Contact:</strong> 9059988802</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-child"></i>
+                <h3>Blue Birds EM School</h3>
+                <p>Agraharam Street, Relangi</p>
+                <p><strong>Contact:</strong> 9618899787</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="admissions" class="section bg-light">
+        <div class="form-box">
+            <h2>Admission Inquiry</h2>
+            <form id="waForm">
+                <input type="text" id="sName" placeholder="Student Name" required>
+                <select id="sCampus">
+                    <option value="Pavithra Vidyalaya (Velpur)">Pavithra Vidyalaya (Velpur)</option>
+                    <option value="Sri Vivekananda Global (Undrajavaram)">Sri Vivekananda Global (Undrajavaram)</option>
+                    <option value="Blue Birds (Relangi)">Blue Birds (Relangi)</option>
+                </select>
+                <input type="text" id="sGrade" placeholder="Class Seeking" required>
+                <input type="tel" id="pPhone" placeholder="Parent Contact Number" required>
+                <button type="button" onclick="sendWhatsApp()" class="btn-wa">
+                    <i class="fab fa-whatsapp"></i> Submit to WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>General Inquiries:</strong> 9030369283 | 9059988802 | 9618899787</p>
+            <p>&copy; 2026 Veeramallu Global Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendWhatsApp() {
+            const name = document.getElementById('sName').value;
+            const campus = document.getElementById('sCampus').value;
+            const grade = document.getElementById('sGrade').value;
+            const parent = document.getElementById('pPhone').value;
+
+            // Sri Vivekananda campus number as default for admissions
+            const phone = "919059988802"; 
+            
+            const message = `*VGA Admission Inquiry*%0A` +
+                            `*Student Name:* ${name}%0A` +
+                            `*Campus:* ${campus}%0A` +
+                            `*Grade:* ${grade}%0A` +
+                            `*Parent Phone:* ${parent}`;
+
+            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
