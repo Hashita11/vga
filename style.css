@@ -3,6 +3,7 @@
     --vga-gold: #d4af37; /* Logo Gold */
 }
 
+
 body { font-family: 'Segoe UI', sans-serif; margin: 0; line-height: 1.6; }
 
 .navbar {
@@ -37,3 +38,4 @@ input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #d
     color: white; width: 60px; height: 60px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center; font-size: 30px;
 }
+
